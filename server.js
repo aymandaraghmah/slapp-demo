@@ -10,7 +10,7 @@ var port = process.env.PORT || 3000
 
 var slapp = Slapp({
   // Beep Boop sets the SLACK_VERIFY_TOKEN env var
-  verify_token: 'xoxp-117750339904-193259634384-202564107094-e47ef8ae15681ab126ba48ba72d8d18c',
+  verify_token: 'xoxp-117750339904-193259634384-201354300305-4752e0ddb39d825a054a38687cff7559',
   convo_store: ConvoStore(),
   context: Context()
 })
@@ -38,9 +38,8 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 slapp
   .message('^(hi|hello|hey)$', ['direct_mention', 'direct_message'], (msg, text) => {
     msg
-      .say(`${text}, how are you?`)
-      // sends next event from user to this route, passing along state
-      .route('how-are-you', { greeting: text })
+      .say(`how are you? my name is ayman`)
+      
   })
   .route('how-are-you', (msg, state) => {
     var text = (msg.body.event && msg.body.event.text) || ''
