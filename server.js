@@ -10,7 +10,7 @@ var port = process.env.PORT || 3000
 
 var slapp = Slapp({
   // Beep Boop sets the SLACK_VERIFY_TOKEN env var
-  verify_token: process.env.SLACK_VERIFY_TOKEN,
+  verify_token: 'xoxp-117750339904-193259634384-202564107094-e47ef8ae15681ab126ba48ba72d8d18c',
   convo_store: ConvoStore(),
   context: Context()
 })
